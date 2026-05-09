@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.calculator {
+  width: 360px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+  margin-bottom: 20px;
+}
+
+#history {
+  min-height: 25px;
+  color: #bdbdbd;
+  text-align: right;
+  font-size: 16px;
+  margin-bottom: 5px;
+  overflow-x: auto;
+}
+
+#result {
+  width: 100%;
+  height: 70px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 38px;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  height: 65px;
+  border: none;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.orange {
+  background: #ff9500;
+}
+
+.orange:hover {
+  background: #ffac33;
+}
+
+.gray {
+  background: #5c5c5c;
+}
+
+.equal {
+  background: #00b894;
+}
+
+.equal:hover {
+  background: #00d1a0;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 95%;
+  }
+
+  .btn {
+    height: 60px;
+    font-size: 20px;
+  }
+}
